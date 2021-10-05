@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="nhập số tiền cần đổi" id="giatri">
+<select id="tienDoi">
+    <option value="VND">VND</option>
+    <option value="USD">USD</option>
+</select>
+<select id="thanhTien">
+    <option value="VND">VND</option>
+    <option value="USD">USD</option>
+</select>
+<input type="button" onclick="chuyendoi()" value="chuyển">
+<p id="ketQua">Kết quả</p>
+<script>
+    function chuyendoi() {
+        let giaTri = parseInt(document.getElementById("giatri").value)
+        let tienDoi = document.getElementById("tienDoi").value
+        let thanhTien = document.getElementById("thanhTien").value
+        if (tienDoi === "USD" && thanhTien === "VND")
+            document.getElementById("ketQua").innerText="Kết quả: "+(giaTri*23000)
+        else if (tienDoi === "VND" && thanhTien === "USD")
+            document.getElementById("ketQua").innerText="Kết quả: "+(giaTri/23000)
+        else document.getElementById("ketQua").innerText="Kết quả: "+giaTri
+    }
+</script>
+</body>
+</html>
