@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id = 'sum'></p>
+<p id = 'average'></p>
+<script>
+    let vatLy = parseFloat(prompt('nhập điểm vật lý: '))
+    let hoaHoc = parseFloat(prompt('nhập điểm hóa học: '))
+    let sinhHoc = parseFloat(prompt('nhập điểm sinh học: '))
+    let tong = vatLy+hoaHoc+sinhHoc;
+    document.getElementById("sum").innerText="Tổng điểm là " + tong
+    document.getElementById("average").innerText="Điểm trung bình là " + tong/3
+</script>
+</body>
+</html>

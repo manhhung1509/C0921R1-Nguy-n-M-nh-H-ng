@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+​
+<body>
+<input type="text" placeholder="nhập giá trị1"  id="input1">
+<input type="text" placeholder="nhập giá trị2"  id="input2">
+<select id="tienTe">
+    <option value="VND">Việt Name</option>
+    <option value="USD">Đô là mỹ</option>
+</select>
+<p id="ketQua">Ket quả</p>
+<input type="button"  onclick="cong()" value="cộng">
+<input type="button"  onclick="tru()" value="trừ">
+<input type="button"  onclick="nhan()" value="nhân">
+<input type="button"  onclick="chia()" value="chia">
+​
+<input type="text" id="input" onchange="display1()">
+<p id="keQua1"></p>
+<script>
+    // sử dụng prompte để input
+    // let n1 = parseInt(prompt("nhập vào số 1"));
+    // let n2 = parseInt(prompt("nhập vào  số 2"));
+    // sử dung input từ thẻ html
+    // thẻ input
+    function display1() {
+        let value= document.getElementById("input").value;
+        document.getElementById("keQua1").innerText=value;
+    }
+    function cong(){
+        let value1= parseInt(document.getElementById("input1").value);
+        let value2 = parseInt(document.getElementById("input2").value);
+        // let tienTe = document.getElementById("tienTe").value;
+        alert("tổng 2 số"+ (value1 +value2));
+    }
+    function tru(){
+        let value1= parseInt(document.getElementById("input1").value);
+        let value2 = parseInt(document.getElementById("input2").value);
+        // let tienTe = document.getElementById("tienTe").value;
+        alert("tổng 2 số"+ (value1 -value2));
+    }
+    function nhan(){
+        let value1= parseInt(document.getElementById("input1").value);
+        let value2 = parseInt(document.getElementById("input2").value);
+        // let tienTe = document.getElementById("tienTe").value;
+        alert("tổng 2 số"+ (value1*value2));
+    }
+    function chia(){
+        let value1= parseInt(document.getElementById("input1").value);
+        let value2 = parseInt(document.getElementById("input2").value);
+        // let tienTe = document.getElementById("tienTe").value;
+        if (value2!=0){
+            document.getElementById("ketQua").innerHTML ="ket qua chia 2 số"+ (value1/value2);
+        }else {
+            alert("không được thực hiện phép chia cho 0")
+        }
+​
+    }
+​
+    ​
+    // ouput
+    // let sum = n1+n2;
+    // alert("Tông số "+ n1 + "và số "+n2 +"là =" + sum )
+    // document.write("Tông số "+ n1 + "và số "+n2 +"là =" + sum )
+    // document.getElementById("ketQua").innerText="Tông số "+ n1 + " và số "+n2 +"là =" + sum;
+    // console.log("Tông số "+ n1 + " và số "+n2 +"là =" + sum);
+    document.getElementById("ketQua").innerHTML ="<button></button>";
+</script>
+</body>
+</html>
