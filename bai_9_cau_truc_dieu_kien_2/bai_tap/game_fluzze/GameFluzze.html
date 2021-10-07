@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="kim1.png" id="hinh1" width="500px" onclick="change('hinh1')">
+<img src="tap2.png" id="hinh2" width="500px" onclick="change('hinh2')">
+<img src="trump3.png" id="hinh3" width="500px" onclick="change('hinh3')">
+<script>
+
+    let objHinh1 = document.getElementById("hinh1")
+    let objHinh2 = document.getElementById("hinh2")
+    let objHinh3 = document.getElementById("hinh3")
+
+    function change(hinh) {
+        // let num =(1+Math.round(Math.random()*(3-1)))
+        switch (hinh) {
+            case "hinh1":
+                if (objHinh1.getAttribute("src") === "kim1.png") {
+                    objHinh1.src = "tap1.png";
+                } else if (objHinh1.getAttribute("src") === "tap1.png") {
+                    objHinh1.src = "trump1.png";
+                } else {
+                    objHinh1.src = "kim1.png";
+                }
+                break
+            case "hinh2":
+                if (objHinh2.getAttribute("src") === "kim2.png") {
+                    objHinh2.src = "tap2.png";
+                } else if (objHinh2.getAttribute("src") === "tap2.png") {
+                    objHinh2.src = "trump2.png";
+                } else {
+                    objHinh2.src = "kim2.png";
+                }
+                break;
+            case "hinh3":
+                if (objHinh3.getAttribute("src") === "kim3.png") {
+                    objHinh3.src = "tap3.png";
+                } else if (objHinh3.getAttribute("src") === "tap3.png") {
+                    objHinh3.src = "trump3.png";
+                } else {
+                    objHinh3.src = "kim3.png";
+                }
+                break
+        }
+        if (objHinh1.getAttribute("src") === "kim1.png" &&
+            objHinh2.getAttribute("src") === "kim2.png" &&
+            objHinh3.getAttribute("src") === "kim3.png") {
+            alert(" Ôngkim chiến thắng");
+        } else if (objHinh1.getAttribute("src") === "tap1.png" &&
+            objHinh2.getAttribute("src") === "tap2.png" &&
+            objHinh3.getAttribute("src") === "tap3.png") {
+            alert("ông tập chiến thắng")
+
+        } else if (objHinh1.getAttribute("src") === "trump1.png" &&
+            objHinh2.getAttribute("src") === "trump2.png" &&
+            objHinh3.getAttribute("src") === "trump3.png") {
+               alert("ông trump chiến thắng")
+        }
+
+
+    }
+</script>
+</body>
+</html>

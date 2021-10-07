@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label>điểm kiểm tra: <input id="kt" type="text" placeholder="nhập điểm bài kiểm tra"></label><br>
+    <label>điểm giữa kỳ: <input id="gk" type="text" placeholder="nhập điểm giũa kỳ"></label><br>
+    <label>điểm cuối kỳ: <input id="ck" type="text" placeholder="nhập điểm cuối kỳ"></label><br>
+    <input type="button" onclick="xepLoai()" value="kiểm tra">
+    <h4 id="diemtb"></h4>
+    <h4 id="ketqua"></h4>
+</form>
+<script>
+    function xepLoai() {
+        let diemKiemTra = parseFloat(document.getElementById("kt").value);
+        let diemGiuaKy = parseFloat(document.getElementById("gk").value);
+        let diemCuoiKy = parseFloat(document.getElementById("ck").value);
+        let tongDiem = diemKiemTra*2 + diemGiuaKy*4 + diemCuoiKy *6;
+        let diemTrungBinh = tongDiem / 10
+        document.getElementById("diemtb").innerText = "điểm trung bình là:" + diemTrungBinh;
+        if (diemTrungBinh >= 8) {
+            document.getElementById("ketqua").innerText = "xếp loại giỏi";
+        } else if (diemTrungBinh >= 6.5) {
+            document.getElementById("ketqua").innerText = "xếp loại khá";
+        } else if (diemTrungBinh >= 5) {
+            document.getElementById("ketqua").innerText = "xếp loại trung bình";
+        } else {
+            document.getElementById("ketqua").innerText = "xếp loại yếu";
+        }
+    }
+</script>
+</body>
+</html>

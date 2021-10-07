@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="test">
+    test1111
+    <button>click</button>
+</p>
+<table>
+    <tr>
+        <td colspan="4"><input value="12" type="text" id="window"></td>
+
+    </tr>
+    <tr>
+        <td><input type="button" value="1" onclick="nhap(this.value)"></td>
+        <td><input type="button" value="2" onclick="nhap(this.value)"></td>
+        <td><input type="button" value="3" onclick="nhap(this.value)"></td>
+        <td><input type="button" value="+"  onclick="nhap(this.value)"></td>
+
+    </tr>
+    <tr>
+        <td><input type="button" value="4" onclick="nhap(this.value)"></td>
+        <td><input type="button" value="5" onclick="nhap(this.value)"></td>
+        <td><input type="button" value="6" onclick="nhap(this.value)"></td>
+        <td><input type="button" value="-" onclick="nhap(this.value)"></td>
+
+    </tr>
+    <tr>
+        <td><input type="button" value="7" onclick="nhap(this.value)"></td>
+        <td><input type="button" value="8" onclick="nhap(this.value)"></td>
+        <td><input type="button" value="9" onclick="nhap(this.value)" ></td>
+        <td><button type="button" value="*" onclick="nhap(this.value)" >x</button></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="C" onclick="xoa()"></td>
+        <td><input type="button" value="0" onclick="nhap(this.value)"></td>
+        <td><input type="button" value="=" onclick="tinhKetQua()"></td>
+        <td><input type="button" value="/" onclick="nhap(this.value)"></td>
+    </tr>
+</table>
+<script>
+
+    function nhap(so) {
+        document.getElementById("window").value +=so;
+    }
+    function tinhKetQua() {
+        let bieuThuc=document.getElementById("window").value;
+        // hàm eval() đùng để thực hiện tính 1 giá trị 1 biểu thức
+        document.getElementById("window").value= eval(bieuThuc);
+    }
+    function xoa() {
+        document.getElementById("window").value="";
+
+    }
+
+   let month = prompt("nhâp thang");//1 => 1 là kiểu chỗi "1";
+    switch (month) {
+           case "1":
+               alert("ok");
+               break
+           default:
+               alert("noe")
+
+    }
+
+</script>
+</body>
+</html>

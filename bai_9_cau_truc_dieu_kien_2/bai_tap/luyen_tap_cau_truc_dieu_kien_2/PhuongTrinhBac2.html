@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập vào a: "));
+    let b = parseInt(prompt("Nhập vào b: "));
+    let c = parseInt(prompt("Nhập vào c: "));
+    document.write("Phương trình nhập vào: "+a+"x^2"+" + "+b+"x + "+c+" = 0");
+    let delta = b*b - 4*a*c;
+    if (delta < 0){
+        document.write("Phương trình vô nghiệm");
+    }else if (delta === 0){
+        document.write("Phương trình có nghiệm kép: x1 = x2 = "+ -b/(2*a));
+    }else {
+        document.write("Phương trình có 2 nghiệm x1= "+ (-b + Math.sqrt(delta))/(2*a)
+            +" và x2 = "+ (-b - Math.sqrt(delta))/(2*a));
+    }
+</script>
+</body>
+</html>
