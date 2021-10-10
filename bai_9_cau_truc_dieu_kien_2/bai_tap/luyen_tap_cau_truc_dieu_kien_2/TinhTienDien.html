@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+<label>số điện:<input id= "sd" type ="text" placeholder="nhập số điện tiêu thụ (kwh)"></label><br>
+<input type="button" onclick="money()" value="kiểm tra">
+    <h2 id="td"></h2>
+</form>
+</body>
+<script>
+    function money() {
+        let tienDien;
+        let soDien = parseFloat(document.getElementById('sd').value);
+        let bac1 = 1000, bac2 = 2000, bac3 = 3000, bac4 = 4000, bac5 = 5000;
+        if (soDien < 0) {
+            document.getElementById('td').innerText = 'không được nhập số điện nhỏ hơn 0';
+        } else if (soDien <= 50) {
+            tienDien = soDien * bac1;
+            document.getElementById('td').innerText = 'tiền điện phải trả là:' + tienDien + 'vnđ';
+        }else if (soDien <= 100) {
+            tienDien = 50*bac1 + ((soDien-50)*bac2);
+            document.getElementById('td').innerText = 'tiền điện phải trả là:' + tienDien + 'vnđ';
+        }else if (soDien <= 200) {
+            tienDien = 50*bac1 + 50*bac2 + ((soDien-100)*bac3) ;
+            document.getElementById('td').innerText = 'tiền điện phải trả là:' + tienDien + 'vnđ';
+        }else if (soDien <= 300) {
+            tienDien = 50*bac1 + 50*bac2 + 100*bac3 + ((soDien-200)*bac4);
+            document.getElementById('td').innerText = 'tiền điện phải trả là:' + tienDien + 'vnđ';
+        }else if (soDien > 300) {
+            tienDien = 50*bac1 + 50*bac2 + 100*bac3 + 100*bac4 + ((soDien-300)*bac5);
+            document.getElementById('td').innerText = 'tiền điện phải trả là:' + tienDien + 'vnđ';
+        }
+    }
+</script>
+</html>

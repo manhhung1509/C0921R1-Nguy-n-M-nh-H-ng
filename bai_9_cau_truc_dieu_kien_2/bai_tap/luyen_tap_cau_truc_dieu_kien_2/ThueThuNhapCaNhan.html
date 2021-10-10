@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <Label>thu nhập:<input id="income" type="text" placeholder="nhập thu nhập cá nhân"></Label><br>
+    <input type="button" onclick="thueThuNhap()" value="check">
+    <h2 id="tax"></h2>
+</form>
+</body>
+<script>
+    function thueThuNhap() {
+        let tienThue;
+        let muc1 = 0.05, muc2 = 0.1, muc3 = 0.15, muc4 = 0.2, muc5 = 0.25;
+        let moc1 = 4000000, moc2 = 10000000, moc3= 20000000, moc4= 30000000, moc5=40000000;
+        let thuNhap = parseFloat(document.getElementById("income").value);
+        if (thuNhap <= moc1){
+            document.getElementById("tax").innerText = "bạn không cần phải nộp thuế"
+        }else if (thuNhap <= moc2){
+            tienThue = (thuNhap - moc1) * muc1;
+            document.getElementById("tax").innerText = "tiền thuế bạn phải đóng là:" + tienThue + "vnđ";
+        }else if (thuNhap >= moc3){
+            tienThue = ((moc2 - moc1) + (thuNhap - moc2)) * muc2;
+            document.getElementById("tax").innerText = "tiền thuế bạn phải đóng là:" + tienThue + "vnđ";
+        }else if (thuNhap >= moc4){
+            tienThue = ((moc2 - moc1) + (moc3 - moc2) +(thuNhap - moc3)) * muc3;
+            document.getElementById("tax").innerText = "tiền thuế bạn phải đóng là:" + tienThue + "vnđ";
+        }else if (thuNhap >= moc5){
+            tienThue = ((moc2 - moc1) + (moc3 - moc2) + (moc4 - moc3) +(thuNhap - moc4)) * muc4;
+            document.getElementById("tax").innerText = "tiền thuế bạn phải đóng là:" + tienThue + "vnđ";
+        }else if (thuNhap > moc5){
+            tienThue = ((moc2-moc1) + (moc3-moc2) + (moc4-moc3) + (moc5-moc4) +(thuNhap)) * muc5;
+            document.getElementById("tax").innerText = "tiền thuế bạn phải đóng là:" + tienThue + "vnđ";
+        }
+    }
+</script>
+</html>
