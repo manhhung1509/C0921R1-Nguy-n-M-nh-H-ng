@@ -6,7 +6,56 @@
 </head>
 <body>
 <script>
+    let n = parseInt(prompt("n = "));
+    for (var i=1; i<=n; i++){
+        for (var j=1; j<=n; j++){
+            if (i>=j){
+                document.writeln("*");
+            }
+        }
+        document.write("<br>");
+    }
 
+    document.write("<br>")
+
+    for (var i=1; i<=n; i++){
+        for (var j=1; j<=n; j++){
+            if (i<=j){
+                document.writeln("*");
+            }
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>")
+
+    for (var i=1; i<=n; i++){
+        let inHang = "";
+        for (var j=1; j<=n; j++){
+            if (i+j>=n+1){
+                inHang = inHang + "*";
+            }else {
+                inHang = inHang + "\xa0\xa0";
+            }
+        }
+
+        document.write(inHang + "<br>");
+    }
+
+    document.write("<br>")
+
+    for (var i=1; i<=n; i++){
+        let inHang = "";
+        for (var j=1; j<=n; j++){
+            if (i+j>=2*i){
+                inHang = inHang + "*";
+            }else {
+                inHang = inHang + "\xa0\xa0";
+            }
+        }
+
+        document.write(inHang + "<br>");
+    }
 </script>
 </body>
 </html>
