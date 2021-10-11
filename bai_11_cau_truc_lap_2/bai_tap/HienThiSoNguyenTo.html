@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // in ra 20 sô nguyên tố đầu tiên 2,3,5,7,11 (1,2,3,4,5,6,7,8,9,10,11,12....)
+    // số nguyên tố chia hết cho 1 chính nó.
+    // => những số mà chia hết cho bất kỳ  1 số nào từ 2 đến gần nó => không phải là SNT
+    // bước 1: kiểm tra 1 số có phải là SNT? => sử dụng vòng for
+    //      let n = prompt("nhập vào số cần Kt")
+    //  if (n>=2){
+    //      let flag =true;
+    //      // kiểm tra SNt
+    //      for (let i=2;i<n;i++){
+    //          if (n%i==0) {
+    //              flag = false;
+    //              break;
+    //          }
+    //      }
+    //      if (flag){
+    //          alert(n + " là SNT");
+    //      }else {
+    //          alert(n + " ko phải SNT");
+    //      }
+    //  }else {
+    //     alert(n +" không phải SNT");
+    // }
+    // bước 2: in 20 số nguyên tố
+    let number= prompt("nhập vào số lượng SNT cần in ra : ");
+    let n = 1;
+    let count =0;
+    let result="";
+    while (count<number){
+        if (n>=2){
+            let flag =true;
+            // kiểm tra SNt
+            for (let i=2;i<n;i++){
+                if (n%i==0) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag){
+                count ++;
+                result +=n+","// result = result +n +",";
+                console.log(result);
+            }
+        }
+        n++;
+    }
+    alert(number+ "số nguyên tố là :"+ result);
+​
+    // cách 2 sử dungh hàm
+    // viết hàm kiểm tra 1 số có phải là số nguyên tố hay không
+    // function ktSNT(so) {
+    //     if (so >= 2) {
+    //         // kiểm tra SNt
+    //         for (let i = 2; i < so; i++) {
+    //             if (so % i == 0) {
+    //                 return false;
+    //             }
+    //         }
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
+    ​
+
+    // ứng dụng hàm ktSNT đê đi in ra số lượng số nguyên tố cần in
+    // let number = prompt("nhập vào số lương so nt cần in");
+    // let count =0;
+    // let n =1;
+    // let result="";
+    // while (count<number){
+    //     if (ktSNT(n)){
+    //         result+= n+","
+    //         count++;
+    //     }
+    //     n++;
+    // }
+    // alert(result);
+    ​
+    ​
+</script>
+</body>
+</html>

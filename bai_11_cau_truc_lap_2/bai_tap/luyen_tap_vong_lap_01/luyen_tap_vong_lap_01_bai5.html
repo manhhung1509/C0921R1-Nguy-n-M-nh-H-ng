@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soDau = 0;
+    let soSau = 1;
+    let tong = 1;
+    for (let i = 1 ; i <= 18 ; i++){
+        tong = tong + soDau + soSau;
+        soSau = soSau + soDau;
+        soDau = soSau - soDau;
+    }
+    document.write('tổng của 20 số fibonacci đầu tiên là:' + tong);
+</script>
+</body>
+</html>
