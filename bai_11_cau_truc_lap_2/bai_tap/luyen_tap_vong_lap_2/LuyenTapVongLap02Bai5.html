@@ -5,6 +5,25 @@
     <title>Title</title>
 </head>
 <body>
+<form>
+<input type="text" id="tienVay" placeholder="Tiền vay ban đầu">
+<input taype="text" id="soThangVay" placeholder="Số tháng vay">
+<input type="text" id="laiSuat" placeholder="Lãi suất hàng tháng">
+<input type="button" onclick="tinhLaiNganHang()" value="Tính số tiền lãi">
+<h2 id="result"></h2>
+</form>
+<script>
+    function tinhLaiNganHang() {
+        let tienLai = 0;
+        let tienVay = parseInt(document.getElementById("tienVay").value);
+        let soThangVay = parseInt(document.getElementById("soThangVay").value);
+        let laiSuat = parseFloat(document.getElementById("laiSuat").value);
 
+        for (var i=1; i<=soThangVay; i++){
+            tienLai += tienVay * laiSuat;
+            tienVay += tienLai;
+        }
+        document.getElementById("result").innerText = "Tiền lãi là: " + tienLai;
+    }
 </body>
 </html>

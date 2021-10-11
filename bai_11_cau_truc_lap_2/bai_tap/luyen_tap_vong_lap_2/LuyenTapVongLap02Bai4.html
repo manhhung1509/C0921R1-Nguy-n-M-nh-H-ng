@@ -5,6 +5,19 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    let long = 21;
+    let width = 7;
+    for (let i=1; i<=width; i++){
+        for (let j=1; j<=long; j++){
+            if (i===1 || i === width || j === 1 || j === long){
+                document.write("* ");
+            }else {
+                document.write("&nbsp&nbsp&nbsp");
+            }
+        }
+        document.writeln("<br/>");
+    }
+</script>
 </body>
 </html>

@@ -5,6 +5,17 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+   let num = parseInt(prompt('nhập số nguyên dương'));
+   let giaiThua = 1;
+    if (num < 0){
+        parseInt(prompt('nhập số nguyên dương'));
+    }else{
+        for (let i=1 ; i<=num ; i++){
+            giaiThua *= i;
+        }
+        document.write(num + '!' + '=' + giaiThua);
+    }
+</script>
 </body>
 </html>
