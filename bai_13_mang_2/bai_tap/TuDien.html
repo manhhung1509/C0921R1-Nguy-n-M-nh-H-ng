@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" id="nhap" placeholder="tiếng anh">
+    <input type="text" id="nghia" placeholder="tiếng việt">
+    <input type="button" onclick="search()" value="tìm kiếm">
+</form>
+</body>
+<script>
+    function search() {
+        let tiengAnh = ['pen', 'notebook', 'book', 'laptop', 'phone'];
+        let tiengViet = ['bút', 'vở', 'sách', 'máy tính', 'điện thoại'];
+        let tuCanDich = document.getElementById('nhap').value;
+        if (tiengAnh.includes(tuCanDich)) {
+            for (let i = 0; i < tiengAnh.length; i++) {
+                if (tuCanDich === tiengAnh[i]) {
+                    document.getElementById("nghia").value = tiengViet[i];
+                    break;
+                }
+            }
+        } else {
+            document.getElementById("nghia").value= "từ bạn nhập không tìm thấy";
+        }
+    }
+</script>
+</html>

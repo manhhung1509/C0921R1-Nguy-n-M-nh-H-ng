@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = 'nguyen manh hung'
+    let count = 1;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === " " && arr[i + 1] !== " ") {
+            count++;
+        }
+    }
+    document.write("Số từ trong chuỗi là: " + count)
+</script>
+</body>
+</html>
