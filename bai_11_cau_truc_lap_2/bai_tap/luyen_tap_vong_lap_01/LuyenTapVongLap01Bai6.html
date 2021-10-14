@@ -8,13 +8,16 @@
 <script>
     let num = 1;
     let tong = 0;
-    for(let i=1 ; i <= 30; i++){
-        while (num % 7 !==0){
+    let i = 1;
+    while (i <= 30) {
+        if (num %7 !== 0){
             num++;
+        }else {
+            document.write(num + "<br/>");
+            tong= tong + num;
+            num++;
+            i++
         }
-        document.write(num + "<br/>");
-        tong= tong + num;
-        num++;
     }
     document.write('tổng 30 số tự nhiên đầu tiên chia hết cho 7 là:' + tong);
 </script>

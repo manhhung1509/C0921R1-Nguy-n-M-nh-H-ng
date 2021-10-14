@@ -5,56 +5,30 @@
     <title>Title</title>
 </head>
 <body>
+<input type="button" value="Chơi" onclick="choi()">
+<input type="reset" value="Chơi lại" onclick="choiLai()">
 <script>
-    let n = parseInt(prompt("n = "));
-    for (var i=1; i<=n; i++){
-        for (var j=1; j<=n; j++){
-            if (i>=j){
-                document.writeln("*");
+    let chon;
+    let min;
+    let max;
+    let num;
+
+    function choi() {
+        min = parseInt(prompt('nhập khoảng từ'));
+        max = parseInt(prompt('đến'));
+        chon = parseInt(prompt('chọn số'));
+        num = Math.floor(Math.random() * (max - min + 1)) + min;
+        if (chon === num) {
+            alert('Bạn đã thắng');
+        } else {
+            for (let i = 1; i < 3; i++) {
+                chon = parseInt(prompt('chọn lại'));
             }
+            alert('bạn đã thua');
         }
-        document.write("<br>");
     }
-
-    document.write("<br>")
-
-    for (var i=1; i<=n; i++){
-        for (var j=1; j<=n; j++){
-            if (i<=j){
-                document.writeln("*");
-            }
-        }
-        document.write("<br>");
-    }
-
-    document.write("<br>")
-
-    for (var i=1; i<=n; i++){
-        let inHang = "";
-        for (var j=1; j<=n; j++){
-            if (i+j>=n+1){
-                inHang = inHang + "*";
-            }else {
-                inHang = inHang + "\xa0\xa0";
-            }
-        }
-
-        document.write(inHang + "<br>");
-    }
-
-    document.write("<br>")
-
-    for (var i=1; i<=n; i++){
-        let inHang = "";
-        for (var j=1; j<=n; j++){
-            if (i+j>=2*i){
-                inHang = inHang + "*";
-            }else {
-                inHang = inHang + "\xa0\xa0";
-            }
-        }
-
-        document.write(inHang + "<br>");
+    function choiLai() {
+        location.reload();
     }
 </script>
 </body>
