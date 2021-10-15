@@ -5,6 +5,21 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function tinhGiaiThua(num) {
+        let result = 1;
+        for (let i = 1; i <= num; i++) {
+            result *= i;
+        }
+        return result;
+    }
 
+    let input = parseInt(prompt('Nhập số'));
+    if (input >= 0) {
+        alert('giai thừa của ' + input + '= ' + tinhGiaiThua(input));
+    } else {
+        alert('Nhập sai');
+    }
+</script>
 </body>
 </html>

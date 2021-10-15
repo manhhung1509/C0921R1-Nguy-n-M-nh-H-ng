@@ -5,6 +5,24 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let thongTin = prompt('nhập tên ngôi sao cần tìm kiếm');
+    let ngoiSao = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let chomSao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
 
+    function array(star) {
+        if (ngoiSao.includes(thongTin)) {
+            for (let i = 0; i < ngoiSao.length; i++) {
+                if (thongTin === ngoiSao[i]) {
+                    alert('ngôi sao' + thongTin + 'thuộc chòm sao:' + chomSao[i]);
+                }
+            }
+        } else {
+            alert('không có chòm sao bạn cần tìm');
+        }
+    }
+
+    array(thongTin);
+</script>
 </body>
 </html>

@@ -5,6 +5,24 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function kiemTraMang(a, b) {
+        if (array.includes(input)) {
+            let count = 0;
+            for (let i = 0; i < array.length; i++) {
+                if (input === array[i]) {
+                    count++;
+                }
+            }
+            alert(count);
+        } else {
+            alert(-1);
+        }
+    }
 
+    let array = ['d', 'a', 'd', 'd', 'd', 'q', 'fd', 'o', 'h'];
+    let input = prompt('nhập vào một ký tự');
+    kiemTraMang(array, input);
+</script>
 </body>
 </html>

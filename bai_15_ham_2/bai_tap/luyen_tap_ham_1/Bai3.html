@@ -5,6 +5,18 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function number(a, b) {
+        if (a <= b) {
+            alert(a + '+' + b + '=' + (a + b));
+        } else if (a > b) {
+            alert(a + '>' + b);
+        }
+    }
 
+    let soThuNhat = parseInt(prompt('nhập số thứ nhất'));
+    let soThuHai = parseInt(prompt('nhập số thứ hai'));
+    number(soThuNhat, soThuHai);
+</script>
 </body>
 </html>

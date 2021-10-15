@@ -5,6 +5,20 @@
     <title>Title</title>
 </head>
 <body>
+<script>
 
+    function chuVi(r) {
+        return 2 * Math.PI * r;
+    }
+
+    function dienTich(r) {
+        return Math.PI * r * r;
+    }
+
+    let banKinh = parseFloat(prompt('nhập chu vi hình tròn'));
+    alert('bán kính hình tròn là:' + chuVi(banKinh));
+    alert('diện tích hình tròn là:' + dienTich(banKinh));
+
+</script>
 </body>
 </html>

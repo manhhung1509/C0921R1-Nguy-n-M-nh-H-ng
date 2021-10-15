@@ -5,6 +5,21 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let so1 = parseInt(prompt('nhập số thứ nhất'));
+    let so2 = parseInt(prompt('nhập số thứ hai'));
+    let so3 = parseInt(prompt('nhập số thứ ba'));
 
+    function timMin(num1,num2,num3) {
+        if (num1 < num2 && num1 < num3) {
+            alert(num1 + 'là số nhỏ nhất');
+        } else if (num2 < num3) {
+            alert(num2 + 'là số nhỏ nhất');
+        } else {
+            alert(num3 + 'là số nhỏ nhất');
+        }
+    }
+    timMin(so1,so2,so3);
+</script>
 </body>
 </html>
