@@ -5,6 +5,19 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function isPalindrome(x) {
+        let a = x.length - 1;
+        for (let i = 0; i < x.length / 2; i++) {
+            if (x[i] !== x[a - i]) {
+                return false;
+            }
+        }
+        return true;
+    }
 
+    let input = prompt('nhập vào 1 từ');
+    let result = alert(isPalindrome(input));
+</script>
 </body>
 </html>
