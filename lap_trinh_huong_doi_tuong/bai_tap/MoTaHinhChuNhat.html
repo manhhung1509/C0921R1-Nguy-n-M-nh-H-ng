@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="art" height="768px" width="1368px" style="border: 1px solid black;"></canvas>
+<script>
+    class Rectangle {
+        constructor(rong, dai) {
+            this.rong = rong;
+            this.dai = dai;
+        }
+
+        getChuVi() {
+            return (this.rong + this.dai) * 2;
+        }
+
+        getDienTich() {
+            return this.rong * this.dai;
+        }
+
+        setRong(rong) {
+            return this.rong = rong;
+        }
+
+        setDai(dai) {
+            return this.dai = dai;
+        }
+
+        toString() {
+            return "diện tích = " + this.rong * this.dai + ", chu vi = " + (this.rong + this.dai) * 2;
+        }
+    }
+
+    let input = new Rectangle(10, 20);
+    alert(input.toString());
+
+    input.setDai(200);
+    input.setRong(150);
+    alert(input.toString());
+    let ctx = document.getElementById("art").getContext('2d');
+    ctx.fillStyle = "green";
+    ctx.fillRect(700, 350, 150, 200);
+
+</script>
+</body>
+</html>

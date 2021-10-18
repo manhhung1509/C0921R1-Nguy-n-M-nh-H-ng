@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class circle {
+        constructor(radius) {
+            this.radius = radius;
+        }
+
+        getRadius() {
+            return this.radius;
+        }
+
+        getArea() {
+            return Math.PI * this.radius * this.radius;
+        }
+    }
+
+    let input = new circle(parseFloat(prompt('nhập bán kính hình tròn')));
+    let banKinh = input.getRadius();
+    let dienTich = input.getArea();
+    alert('diện tích hình tròn là: ' + dienTich + 'bán kính là: ' + banKinh);
+</script>
+</body>
+</html>
