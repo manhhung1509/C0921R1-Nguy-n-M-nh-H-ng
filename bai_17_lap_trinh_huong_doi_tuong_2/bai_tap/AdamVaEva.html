@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        setGender(gender) {
+            this.gender = gender;
+        }
+
+        checkApple(apple) {
+            document.writeln("khối lượng quả táo còn:" + apple +"<br>");
+
+        }
+
+        eat(apple) {
+            if (apple === true) {
+                return this.weight++;
+            }
+        }
+
+        say(alo) {
+            document.writeln(alo + "<br>");
+        }
+
+        getName() {
+            return this.name = name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+    }
+
+    let adam = new Human('Adam', 'nam', 60);
+    let eva = new Human("Eva", "nữ", 45);
+    let input = new Apple(10);
+    while (input.weight > 0) {
+        adam.eat(true) && eva.eat(true);
+        adam.checkApple(input.weight);
+        input.weight--;
+        eva.checkApple(input.weight);
+        input.weight--;
+    }if(input.weight === 0){
+        adam.say("Adam: đã ăn hết táo")
+        eva.say('Eva: ok');
+    }
+    document.writeln('số cân sau khi Adam ăn táo là :' + adam.getWeight() +'<br>');
+    document.writeln('số cân sau khi Eva ăn táo là :' + eva.getWeight());
+
+</script>
+</body>
+</html>
