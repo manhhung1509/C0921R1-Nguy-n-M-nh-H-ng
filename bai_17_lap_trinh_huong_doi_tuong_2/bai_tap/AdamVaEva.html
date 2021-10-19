@@ -28,7 +28,7 @@
         }
 
         checkApple(apple) {
-            document.writeln("khối lượng quả táo còn:" + apple +"<br>");
+            document.writeln("khối lượng quả táo còn:" + apple + "đv" + "<br>");
 
         }
 
@@ -68,11 +68,12 @@
         input.weight--;
         eva.checkApple(input.weight);
         input.weight--;
-    }if(input.weight === 0){
-        adam.say("Adam: đã ăn hết táo")
+    }
+    if (input.weight === 0) {
+        adam.say("Adam: đã ăn hết táo");
         eva.say('Eva: ok');
     }
-    document.writeln('số cân sau khi Adam ăn táo là :' + adam.getWeight() +'<br>');
+    document.writeln('số cân sau khi Adam ăn táo là :' + adam.getWeight() + '<br>');
     document.writeln('số cân sau khi Eva ăn táo là :' + eva.getWeight());
 
 </script>
