@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+   let income = parseFloat(prompt('nhập thu nhập của bạn'));
+   let muc1 = 7000000;
+   let muc2 = 15000000;
+   let tax = 0;
+   let salary = 0;
+   if (income < muc1){
+       tax = income * 0.05;
+       salary = income - tax;
+       alert('số tiền thuế phải đóng là:' + tax);
+       alert('số tiền lương thực nhận là:' + salary);
+   }else if(income > muc1 & income < muc2){
+       tax = income * 0.1;
+       salary = income - tax;
+       alert('số tiền thuế phải đóng là:' + tax);
+       alert('số tiền lương thực nhận là:' + salary);
+   }else {
+       tax = income * 0.2;
+       salary = income - tax;
+       alert('số tiền thuế phải đóng là:' + tax);
+       alert('số tiền lương thực nhận là:' + salary);
+   }
+</script>
+</body>
+</html>
