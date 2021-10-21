@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [7, 2, 5, 3, 5, 3];
+    let b = [7, 2, 5, 6, 4, 6, 8, 8, 3, 5, 3];
+    let c = [];
+    for (let i = 0; i < b.length; i++) {
+        for (let j = 0; j < a.length; j++) {
+            if (b[i] === a[j]) {
+                b.splice(i, 1);
+            }
+        }
+    }
+    for (let i = 0; i < b.length; i++) {
+        if (!c.includes(b[i])) {
+            c.push(b[i]);
+        }
+    }
+    alert(c);
+</script>
+</body>
+</html>
