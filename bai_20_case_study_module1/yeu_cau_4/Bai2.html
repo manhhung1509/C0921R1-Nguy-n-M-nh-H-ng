@@ -6,7 +6,23 @@
 </head>
 <body>
 <script>
+    function timKyTuKhacNhau(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === arr[i + 1]) {
+                arr.splice(i + 1, 1);
+                array.push(arr[i]);
+            } else {
+                array.push(arr[i]);
+            }
+        }
+    }
 
+    let s = "cabca";
+    let input = s.split('');
+    input.sort();
+    let array = [];
+    let result = timKyTuKhacNhau(input);
+    document.write('các ký tự khác nhau trong chuỗi là' + array);
 </script>
 </body>
 </html>
