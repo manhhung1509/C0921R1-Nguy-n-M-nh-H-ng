@@ -6,28 +6,6 @@
 </head>
 <body>
 <script>
-    function kyTuKhacNhau(string1, string2) {
-
-        for (let i = 0; i < string1.length; i++) {
-            for (let j = 0; j < string2.length; j++) {
-                if (string2[j] === string1[i]) {
-                    string2.splice(j, 1);
-                    arr.push(string1[i]);
-                    count++;
-                    break;
-                }
-            }
-        }
-    }
-
-    let s1 = "aabcc";
-    let s2 = "adcaa";
-    let arr = [];
-    let count = 0;
-    let input1 = s1.split('');
-    let input2 = s2.split('');
-    let result = kyTuKhacNhau(input1, input2)
-    document.write('có ' + count + ' ký tự khác nhau trong chuỗi là: ' + arr);
 
 </script>
 </body>
