@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTraSnt(num) {
+        if (num < 2) {
+            return false;
+        } else {
+            for (let k = 2; k <= num / 2; k++) {
+                if (num % k === 0) {
+                    return false;
+                }
+            }
+            array.push(num);
+            return true;
+        }
+    }
+
+    function demSoNguyenTo(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (kiemTraSnt(arr[i][j])) {
+                    count++;
+                }
+            }
+        }
+    }
+
+    let arr = [
+        [1, 2, 3, 5, 60, 44, 7, 3, 43, 326, 8, 4],
+        [12, 23, 2, -4, 0, 23, 321, 11, 1, 6]
+    ];
+    let count = 0;
+    let array = [];
+    demSoNguyenTo(arr);
+    document.write('các số nguyên tố là: ' + array + '<br>' + 'tổng các số nguyên tố là: ' + count);
+</script>
+</body>
+</html>
