@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    confirm("1.cafe " + "2.cam vắt " + "3.nước ép cà rốt "
+        + "4.nước ép cà chua " + "5. nước lọc " + "6.nước dừa " + "7.thoát gọi món");
+    let price = [15000, 25000, 25000, 20000, 5000, 15000];
+    let number = [1, 2, 3, 4, 5, 6];
+    let select;
+    let quantity;
+    do {
+        select = parseInt(prompt("vui lòng chọn dồ uống"));
+        for (let i = 0; i < number.length; i++) {
+            if (select === number[i]) {
+                alert("1 ly có giá là: " + price[i]);
+                quantity = parseInt(prompt("bạn order mấy ly ạ?"));
+                alert('số tiền bạn phải trả là:' + quantity * price[select - 1]);
+            } else if (select === 7) {
+                alert('cảm ơn bạn');
+                break;
+            }
+        }
+        if (select === 7) {
+            break;
+        }
+    } while (select >= 1 && select <= 7);
+</script>
+</body>
+</html>

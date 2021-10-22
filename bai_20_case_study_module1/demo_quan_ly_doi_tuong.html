@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="button" value="Add New Worker" onclick="addNewWorker()">
+<p id="ketQua"></p>
+<script>
+    class Worker{
+        constructor(name, age, salary) {
+            this.name = name;
+            this.age = age;
+            this.salary = salary;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getAge() {
+            return this.age;
+        }
+
+        getSalary() {
+            return this.salary;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+        setAge(age){
+            this.age= age;
+        }
+        setSalary(salary){
+            this.salary =salary;
+        }
+        toString(){
+            return "name: "+ this.name + "-age: "+ this.age+ "-salary: "+ this.salary;
+        }
+    }
+
+    function addNewWorker() {
+        let newName= prompt("Nhập tên cần thêm");
+        let newAge= prompt(" nhập tuổi cần them");
+        let newSalary= prompt(" nhập lương cần thêm");
+        let worker = new Worker(newName, newAge,newSalary);
+        workerList.push(worker);
+        display(workerList);
+    }
+
+    function display(arrayWorker) {
+        let tableString ='<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Name</th>\n' +
+            '        <th>Age</th>\n' +
+            '        <th>Salary</th>\n' +
+            '        <th>Edit</th>\n' +
+            '        <th>Delete</th>\n' +
+            '    </tr>';
+
+        for (let i=0;i<arrayWorker.length;i++){
+            tableString+='<tr>\n' +
+                '       <td>'+(i+1)+'</td>\n' +
+                '       <td>'+arrayWorker[i].getName()+'</td>\n' +
+                '       <td>'+arrayWorker[i].getAge()+'</td>\n' +
+                '       <td>'+arrayWorker[i].getSalary()+'</td>\n' +
+                '       <td><input type="button" value="Edit" onclick="editWorker('+i+')"></td>\n' +
+                '       <td><input type="button" value="Delete" onclick="deleteWorker('+i+')"></td>\n' +
+                '    </tr>';
+        }
+        tableString+='</table>';
+        document.getElementById("ketQua").innerHTML=tableString;
+    }
+    function editWorker(index){
+        let newName= prompt("Nhập tên cần edit");
+        let newAge= prompt(" nhập tuổi cần edit");
+        let newSalary= prompt(" nhập lương cần edit");
+        workerList[index].setName(newName);
+        workerList[index].setAge(newAge);
+        workerList[index].setSalary(newSalary);
+        display(workerList);
+
+    }
+    function deleteWorker(index){
+        workerList.splice(index,1);
+        display(workerList);
+    }
+    // Hiên thị
+    let workerList = [];
+    let worker1 = new Worker("Chanh1",18,1000);
+    let worker2 = new Worker("Chanh2",18,1000);
+    let worker3 = new Worker("Chanh3",18,1000);
+    workerList.push(worker1);
+    workerList.push(worker2);
+    workerList.push(worker3);
+    display(workerList);
+</script>
+</body>
+</html>
+</body>
+</html>

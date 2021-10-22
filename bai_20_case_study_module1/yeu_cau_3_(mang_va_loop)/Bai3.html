@@ -6,6 +6,17 @@
 </head>
 <body>
 <script>
+    let numerators = [5, 2, 5];
+    let denominators = [6, 3, 4];
+    let maxFraction = numerators[0] / denominators[0];
+    let max = 0;
+    for (let i = 0; i < numerators.length; i++) {
+        if (numerators[i] / denominators[i] > maxFraction) {
+            maxFraction = numerators[i] / denominators[i];
+            max = i;
+        }
+    }
+    alert('phân số lớn nhất có chỉ số là: ' + max);
 
 </script>
 </body>
